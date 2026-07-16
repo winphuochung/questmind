@@ -534,10 +534,8 @@ export default function App() {
                 {["Khởi tạo dữ liệu", "Xử lý & Prompt", "Khởi chạy AI", "Hoàn tất Campaign"].map((stepName, i) => {
                   let status = "pending";
                   if (i < loadingStep) status = "success";
-                  if (i === loadingStep) {
-                    if (errorMessage) status = "error";
-                    else status = "loading";
-                  }
+                  else if (errorMessage) status = "error";
+                  else if (i === loadingStep) status = "loading";
 
                   let bgClass = "bg-slate-900 border-slate-800 text-slate-500";
                   if (status === "success") bgClass = "bg-emerald-950/50 border-emerald-500/50 text-emerald-400";
