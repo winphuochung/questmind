@@ -153,28 +153,7 @@ export default function App() {
     }
   }, [playerState]);
 
-  // Animated RPG loading statements
-  useEffect(() => {
-    if (!loadingCampaign) return;
 
-    const phrases = [
-      "🧙‍♂️ Đang bái tế Đại Pháp Sư AI...",
-      "📜 Đang thu thập và mật dịch tư liệu tri thức...",
-      "⚡ Đang luyện chế thần binh câu hỏi (Trắc nghiệm, Điền khuyết)...",
-      "👹 Đang kiến tạo 3 đại lục và triệu hồi Quái Thú canh giữ...",
-      "💎 Đang phân bổ Mảnh Ghép Cổ Vật trong Thư Viện Bảo Tàng...",
-    ];
-
-    let count = 0;
-    setLoadingText(phrases[0]);
-
-    const interval = setInterval(() => {
-      count = (count + 1) % phrases.length;
-      setLoadingText(phrases[count]);
-    }, 2800);
-
-    return () => clearInterval(interval);
-  }, [loadingCampaign]);
 
   // Read uploaded text or image file
   const handleFileProcess = async (file: File) => {
