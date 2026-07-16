@@ -835,8 +835,6 @@ export default function App() {
         </div>
       </footer>
 
-      </footer>
-
       {/* Settings Modal Dialog */}
       <AnimatePresence>
         {showSettingsModal && (
