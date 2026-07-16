@@ -1,0 +1,6 @@
+{
+  "name": "QuestMind AI",
+  "description": "Nền tảng học tập thông minh bằng AI kết hợp nhập vai RPG, chiến đấu quái vật bằng tri thức và thu thập mảnh ghép bí ẩn bí thuật.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
