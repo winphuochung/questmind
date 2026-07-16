@@ -39,7 +39,7 @@ async function fetchWithFallback(callFn: (model: string) => Promise<any>): Promi
       }
     }
     // If all fail, throw the original error or a combined one
-    throw new Error(error.message || error.toString());
+    throw new Error(error?.message || String(error));
   }
 }
 
